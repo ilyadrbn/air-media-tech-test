@@ -1,5 +1,5 @@
 <template>
-    <a class="flex items-center gap-3 text-white no-underline" href="#">
+    <a class="flex h-full items-center gap-2 text-white no-underline" href="#">
         <svg
             width="44"
             height="41"

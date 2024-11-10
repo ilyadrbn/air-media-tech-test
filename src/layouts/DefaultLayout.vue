@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import MainHeader from "@/components/header/HeaderComponent.vue";
+import HeaderMain from "@/components/header/Header.vue";
 </script>
 
 <template>
     <div class="main-wrapper min-h-screen">
-        <MainHeader />
+        <HeaderMain />
         <slot />
     </div>
 </template>

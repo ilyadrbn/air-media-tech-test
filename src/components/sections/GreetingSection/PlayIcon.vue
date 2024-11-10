@@ -108,3 +108,11 @@
         </defs>
     </svg>
 </template>
+
+<style lang="scss" scoped>
+@media (max-width: 879px) {
+    circle {
+        display: none;
+    }
+}
+</style>

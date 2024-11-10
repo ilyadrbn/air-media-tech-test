@@ -1,7 +1,4 @@
 import { gsap } from "gsap";
-import { ref } from "vue";
-
-const isHovered = ref(false);
 
 interface ICoord {
     x: number;
@@ -16,18 +13,16 @@ function getMousePosition(event: MouseEvent, element: HTMLElement): ICoord {
     };
 }
 
-function getWaveElement(button: HTMLButtonElement): HTMLElement | null {
+function getWaveElement(
+    button: HTMLButtonElement | HTMLLinkElement,
+): HTMLElement | HTMLLinkElement | null {
     return button.querySelector(".wave-effect");
 }
 
 function useEnableWave(event: MouseEvent) {
-    const button = event.currentTarget as HTMLButtonElement;
-    if (!button) return;
-
-    isHovered.value = true;
-
+    const button = event.currentTarget as HTMLButtonElement | HTMLLinkElement;
     const wave = getWaveElement(button);
-    if (!wave) return;
+    if (!button || !wave) return;
 
     gsap.set(wave, { scale: 0, x: 0, y: 0 });
 
@@ -49,23 +44,17 @@ function useEnableWave(event: MouseEvent) {
 
 function useRemoveWave(event: MouseEvent) {
     const button = event.currentTarget as HTMLButtonElement;
-    if (!button) return;
-
     const wave = getWaveElement(button);
-    if (!wave) return;
+    if (!button || !wave) return;
 
     const { x, y } = getMousePosition(event, button);
-
     gsap.to(wave, {
         x: x - button.offsetWidth / 2,
         y: y - button.offsetHeight / 2,
         scale: 0,
         duration: 0.6,
         ease: "power2.out",
-        onStart: () => {
-            isHovered.value = false;
-        },
     });
 }
 
-export { useEnableWave, useRemoveWave, isHovered };
+export { useEnableWave, useRemoveWave };
