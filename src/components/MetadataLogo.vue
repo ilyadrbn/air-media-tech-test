@@ -18,7 +18,7 @@
                 style="fill: white; fill-opacity: 1"
             />
         </svg>
-        <h2 class="w-min text-sm font-semibold">
+        <h2 class="w-min text-sm font-normal">
             {{ "Metadata translation".toUpperCase() }}
         </h2>
     </a>

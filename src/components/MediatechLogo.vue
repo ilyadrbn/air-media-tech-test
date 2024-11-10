@@ -43,3 +43,11 @@
         </div>
     </a>
 </template>
+
+<style scoped lang="scss">
+@media (max-width: 1024px) {
+    a {
+        display: none;
+    }
+}
+</style>
