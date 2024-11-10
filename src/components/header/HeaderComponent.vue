@@ -16,7 +16,7 @@ const navItems: Array<string> = [
 <template>
     <header
         id="header"
-        class="flex min-w-full items-center justify-between bg-black px-20 py-4"
+        class="sticky top-0 flex min-w-full items-center justify-between bg-black px-20 py-4 border-b border-b-[#4E4E4E]"
     >
         <div class="flex h-[42px] items-center gap-4">
             <MetadataLogo />
@@ -33,7 +33,7 @@ const navItems: Array<string> = [
             >
                 {{ "Login".toUpperCase() }}
             </button>
-            <HeaderWaveButton btn-text="Sign up" />
+            <HeaderWaveButton btn-text="sign up" />
         </div>
     </header>
 </template>
