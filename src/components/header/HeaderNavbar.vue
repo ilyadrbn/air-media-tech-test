@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import WaveNavLink from "./WaveNavLink.vue";
 
+defineProps<{
+    currentTheme: { background: string; text: string; icon: string };
+}>();
+
 const navItems: Array<string> = [
     "About",
     "How it works",
@@ -14,7 +18,7 @@ const navItems: Array<string> = [
     <nav>
         <ul class="ml-auto flex gap-6">
             <li v-for="item in navItems" :key="item" class="h-full list-none">
-                <WaveNavLink :label="item" />
+                <WaveNavLink :label="item" :current-theme />
             </li>
         </ul>
     </nav>

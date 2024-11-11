@@ -6,19 +6,23 @@ import WaveButton from "./WaveButton.vue";
 import LoginButton from "./LoginButton.vue";
 
 import { useSlider } from "@/composables/useSlider";
+import { useTheme } from "@/composables/useTheme";
 
 const { startTouch, moveTouch } = useSlider();
+
+const { currentTheme } = useTheme();
 </script>
 
 <template>
     <header
         id="header"
-        class="sticky top-0 z-50 flex min-w-full items-center justify-between border-b border-b-[#4E4E4E] bg-black px-20 py-4"
+        class="sticky top-0 z-50 flex min-w-full items-center justify-between border-b border-b-[#4E4E4E] px-20 py-4"
+        :class="currentTheme.background"
     >
         <div class="flex h-full gap-4">
-            <MetadataLogo />
+            <MetadataLogo :current-theme />
             <div class="divider hidden lg:block"></div>
-            <MediatechLogo />
+            <MediatechLogo :current-theme />
         </div>
 
         <div
@@ -26,10 +30,10 @@ const { startTouch, moveTouch } = useSlider();
             @touchstart.passive="startTouch"
             @touchmove.passive="moveTouch"
         >
-            <HeaderNavbar />
+            <HeaderNavbar :current-theme />
             <div class="auth-methods auth flex h-14 gap-6">
-                <LoginButton />
-                <WaveButton btn-text="sign up" />
+                <LoginButton :current-theme />
+                <WaveButton btn-text="sign up" :current-theme />
             </div>
         </div>
     </header>

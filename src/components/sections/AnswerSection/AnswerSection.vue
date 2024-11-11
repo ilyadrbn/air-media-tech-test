@@ -7,7 +7,7 @@ import QuestionsBlock from "./QuestionsBlock.vue";
 
 <template>
     <section
-        class="flex flex-col items-center overflow-hidden bg-white px-36 pb-44"
+        class="light flex flex-col items-center overflow-hidden bg-white px-36 pb-44"
     >
         <StepsComponent />
         <LoudSpeaker />

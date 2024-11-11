@@ -14,7 +14,7 @@ window.addEventListener("resize", () => {
 <template>
     <section
         ref="dynamicBlock"
-        class="text-shadow-purple relative overflow-hidden bg-black px-20 py-32 pb-60 text-9xl leading-[150px] text-white lg:text-[140px]"
+        class="text-shadow-purple dark relative overflow-hidden bg-black px-20 py-32 pb-60 text-9xl leading-[150px] text-white lg:text-[140px]"
     >
         <h2>AI YouTube</h2>
         <div class="flex items-center gap-8">
