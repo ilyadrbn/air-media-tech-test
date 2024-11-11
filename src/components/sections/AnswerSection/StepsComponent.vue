@@ -5,7 +5,7 @@
         viewBox="0 0 1440 140"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="mx-auto"
+        class="mx-auto mb-16"
     >
         <g clip-path="url(#clip0_1253_2183)">
             <path

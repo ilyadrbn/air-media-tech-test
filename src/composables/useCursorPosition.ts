@@ -5,7 +5,6 @@ export function useCursorPosition() {
     const cursorY = ref(0);
 
     const handleMouseMove = (event: MouseEvent) => {
-        console.log(event);
         cursorX.value = event.x;
         cursorY.value = event.y;
     };

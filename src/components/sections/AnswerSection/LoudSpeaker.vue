@@ -1,10 +1,11 @@
 <template>
     <svg
-        width="83"
-        height="84"
+        width="200"
+        height="200"
         viewBox="0 0 83 84"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        class="mb-7"
     >
         <path
             d="M79.0835 34.6419V45.0169H75.6668V48.4753H72.2501V31.1836H75.6668V34.6419H79.0835Z"
