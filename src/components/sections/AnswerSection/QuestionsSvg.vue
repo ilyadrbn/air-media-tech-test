@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// import { onMounted, ref, type Ref } from "vue";
 import { useSvgPosition } from "@/composables/useSvgPosition";
 
 const props = defineProps<{

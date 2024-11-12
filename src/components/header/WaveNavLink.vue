@@ -53,11 +53,6 @@ a {
         border-radius: 60px;
         border: 1px solid white;
         padding: 0 12px;
-        // &:hover {
-        //     span:not(.wave-effect) {
-        //         color: black;
-        //     }
-        // }
     }
 }
 </style>

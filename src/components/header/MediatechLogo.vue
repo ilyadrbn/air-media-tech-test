@@ -48,7 +48,7 @@ const props = defineProps<{
 </template>
 
 <style scoped lang="scss">
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     a {
         display: none;
     }
